@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+html {
+  scroll-behavior: smooth; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 0%;
+}
+
+/* Header Header Header */
+
+.container-header {
+    padding: 2% 10%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+
+.nav-links {
+    background-color: rgb(241, 241, 241);
+    border-radius: 50px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.15),
+        0 10px 25px rgba(0, 0, 0, 0.25); 
+    width: 70%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#lista-links-header {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 1.87rem;
+    gap: 2.1rem;
+}
+
+#lista-links-header a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-family: "Lobster", sans-serif;
+    position: relative;
+    transition: all 0.7s ease
+}
+
+#logo-header {
+    width: 70px;
+    cursor: pointer;
+}
+
+#login-header {
+    width: 20px;
+}
+
+.banner {
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+}
+
+/*---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ---- Main ----*/
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 0% 10%;
+}
+
+.main-container a { 
+    text-decoration: none; 
+    color: black; 
+}
+
+
+
+/*-------- Pesquisa -----------*//*-------- Pesquisa -----------*//*-------- Pesquisa -----------*/
+#campo-pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin-top: 1rem;
+}
+
+#pesquisaFilmes {
+    flex: 1;
+    border: solid black 2px;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    height: 3rem;
+    padding: 0.3rem 1rem;
+    border-radius: 8px;
+    background: url('./assets/assets-icons/lupa.png') no-repeat right 10px center;
+    background-size: 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+#pesquisaFilmes::placeholder {
+    color: rgba(27, 110, 204, 0.685);
+}
+
+
+/* CARDS FILMES CARTAz/EM BREVE -- CARDS FILMES CARTAz/EM BREVE -- CARDS FILMES CARTAz/EM BREVE -- CARDS FILMES CARTAz/EM BREVE -- */
+#CartazBotaoTroca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem; 
+}
+
+#CartazBotaoTroca img  {
+    width: 3%;
+    transition: all 0.7s ease;
+}
+
+#CartazBotaoTroca img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+#titulo-cartaz {
+    font-size: 2.5rem;
+    font-family: "Lobster", sans-serif;
+    margin: 0 1.25rem;
+    transition: opacity 0.35s ease;
+    color: black; 
+}
+
+#container-filmes,
+.grid-filmes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+
+.cardFilme {
+    object-fit: cover;
+    width: 280px;
+    height: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.cardFilme img {
+  width: 100%;
+  height: 25rem;
+  border-radius: 10px 10px 0 0;
+}
+
+#container-filmes-breve img {
+    width: 100%;
+    height: 25rem;
+}
+
+.cardFilme ul li {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    list-style: none; 
+    padding: 13px; 
+    font-size: 1rem; 
+    font-weight: 200; 
+    font-family: "Lobster", sans-serif;
+}
+
+.cardFilme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+
+#emBreve {
+    font-size: 2.5rem;
+    font-family: "Lobster", sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.tamanhoCapaFilmeEmBreve {
+    width: 100%;
+    height: 80%;
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.escondido {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+/* -------------------------------------------- */
+
+/* Campo Inscreva Email -- Campo Inscreva Email -- Campo Inscreva Email -- Campo Inscreva Email -- Campo Inscreva Email -- */
+.campo-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 125%;
+    gap: 1.5rem;
+    background-color: #72afe7c9;
+    position: relative;
+}
+
+#banner-combo {
+    width: 100%;          
+    object-fit: cover;
+    display: block;     
+}
+
+
+#inserirEmail {
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #3987fc, #60a5fa, #60affa);
+    color: black;
+    padding: 0.9rem 1.8rem;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 20em;
+    transition: all 0.5s ease;
+}
+
+#inserirEmail::placeholder {
+    color: rgba(8, 8, 8, 0.7);
+}
+
+#inserirEmail:focus {
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+.tiulo-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3% 0% 5% 0%;
+}
+
+.tiulo-email h2 {
+    color: black;
+    font-family: "Lobster", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;;
+}
+
+.conteudo-email {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+}
+
+.conteudo-email button {
+    background: rgba(0, 0, 0, 0.699);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+}
+
+/* --------------------------------------------------------------------------------*/
+
+/* --- Cards Cinemas ---- Cards Cinemas ---- Cards Cinemas ---- Cards Cinemas ---- */
+
+#tituloCinemas {
+    font-size: 2.8rem;
+    font-family: "Lobster", sans-serif;
+    color: #0a0a0a;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 5px rgba(0, 80, 200, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#tituloCinemas img {
+    width: 3%
+}
+
+.container-salasCinema {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 3rem;
+  background: linear-gradient(to bottom,#72afe7c9, #5e80a0c9,#476d91c9, #324d66c9, #16212cc9, #090d11c9,  #000000d8); 
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.651);
+}
+
+.cardCinema {
+  background: #ffffff; 
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.cardCinema:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 100, 255, 0.25);
+}
+
+.img-cinema {
+  width: 100%;
+  height: auto;
+  border-bottom: 10px solid #3b82f6; 
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cardCinema:hover .img-cinema {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.btn-seta {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-seta:hover {
+  transform: scale(1.1);
+}
+
+.img-setaBaixo {
+  width: 40px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.img-setaBaixo:hover {
+  filter: drop-shadow(0 3px 6px rgba(59, 130, 246, 0.4));
+}
+
+.more-info {
+  font-family: "Lobster", sans-serif;
+  font-size: 1rem;
+  color: #1f2937; 
+  background-color: #eaf1ff; 
+  margin: 1rem auto 0;
+  padding: 0.8rem;
+  width: 85%;
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(59, 130, 246, 0.25);
+  display: none;
+  transition: all 0.3s ease;
+  text-align: justify;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+/*-------- Sobre nós -----------*//*/*-------- Sobre nós -----------*//*-------- Sobre nós -----------*/
+#container-sobre-nos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+#container-sobre-nos {
+    background-color: rgba(0, 0, 0, 0.836);
+    width: 125%;
+    padding: 3% 13%;
+    text-align: justify;
+}
+
+#tituloSobreNos {
+    font-size: 3rem;
+    color: #ffd700;
+    font-family: "Lobster", sans-serif;
+    margin: 2rem 0rem;
+    text-shadow: 2px 2px 8px #3b82f6;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+#tituloSobreNos:hover {
+    transform: scale(1.05);
+}
+
+.conteudo-sobre-nos {
+    font-size: 1.4rem;
+    color: #f3f4f6;
+    font-family: "Lobster", sans-serif;
+    line-height: 2;
+    transition: all 0.5s ease;
+}
+
+.container-midias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem
+}
+
+.container-midias img {
+    width: 4%;
+}
+
+/* FOOTER -- FOOTER -- FOOTER -- FOOTER -- FOOTER -- FOOTER -- FOOTER -- FOOTER -- */
+
+#tarjeta {
+    width: 125%;
+}
+
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.836);
+}
+
+.rodape_informacoes {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  gap: 4rem;
+  height: 128px;
+  color: white;
+}
+
+.logo {
+  width: 50%;
+}
+
+.funcionamento {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.funcionamento li {
+    list-style: none;
+    margin-bottom: 0.8rem;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.funcionamento a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#redes-sociais {
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* -------------------------------------------------------- */
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+@media (min-width: 1025px) and (max-width: 1224px){
+    #container-filmes, .grid-filmes {
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+  }
+}
+
+/* --- Tablets e notebooks médios (600px a 1024px) --- */
+@media (min-width: 781px) and (max-width: 1024px) {
+
+    .container-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #lista-links-header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #logo-header { width: 60px; }
+
+
+  .grid-filmes, #container-filmes {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #tituloSobreNos { font-size: 2rem; }
+  .conteudo-sobre-nos { font-size: 1.2rem; }
+  #tituloCinemas { font-size: 2.2rem; }
+  .logo { width: 50%; }
+}
+
+/* --- Celulares grandes (até 780px) --- */
+@media (min-width: 100px) and (max-width: 780px) {
+  body {
+    padding: 0;
+  }
+
+  .container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1rem 0;
+  }
+
+  #lista-links-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  #campo-pesquisa {
+    width: 90%;
+  }
+
+  #pesquisaFilmes {
+    font-size: 1rem;
+    height: 2.5rem;
+  }
+
+  .banner {
+    width: 100%;
+    margin: 0;
+  }
+
+  #titulo-cartaz {
+    font-size: 1.8rem;
+  }
+
+#container-filmes, .grid-filmes {
+    grid-template-columns: auto;
+    gap: 1.5rem;
+  }
+
+  .cardFilme {
+    width: 100%;
+  }
+
+  #tituloSobreNos {
+    font-size: 1.6rem;
+  }
+
+  .conteudo-sobre-nos {
+    font-size: 1rem;
+  }
+
+  .tiulo-email h2 {
+    font-size: 1.4rem;
+  }
+
+  .conteudo-email button {
+    font-size: 0.7rem;
+  }
+
+  #inserirEmail {
+    width: 15em;
+    font-size: 0.9rem;
+  }
+
+  #tituloCinemas {
+    font-size: 1.8rem;
+  }
+
+  .container-salasCinema {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .img-cinema {
+    width: 100%;
+    height: auto;
+  }
+
+  .rodape {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .rodape_informacoes {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 40%;
+  }
+}
+

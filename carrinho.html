@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | Luz & Cena</title>
+  <link rel="shortcut icon" href="./assets/assets-logo/Favicon.png" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(./assets/assets-fundo/fundoAbsurdo.jpg) no-repeat center;
+  background-size: cover;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Header */
+.header-carrinho {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.header-carrinho .logo {
+  width: 60px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.logo:hover {
+  transform: scale(1.09);
+  transform: translateY(5px);
+}
+
+/* Main */
+.main-carrinho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 10%;
+}
+
+.info-pedido {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+}
+
+.info-pedido h2 {
+  font-family: "Lobster", sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.item-carrinho img {
+  width: 90px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.item-carrinho .detalhes h3 {
+  font-family: "Lobster", cursive;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.item-carrinho .detalhes span {
+  color: #1b6ecc;
+  font-weight: bold;
+}
+
+/* Botões */
+.acoes-carrinho {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#select-pagamento {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 5px solid #1b6ecc;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 1rem;
+    outline: none;
+    width: 200px;
+    text-align: center;
+    font-family: "Lobster", sans-serif;
+}
+
+#select-pagamento option {
+    color: black; 
+}
+
+#acoes-botoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.acoes-carrinho button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #1b6ecc;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.acoes-carrinho button:hover {
+  background-color: #0e4fa6;
+  transform: scale(1.05);
+}
+
+.total {
+  font-size: 1.3rem;
+  color: white;
+}
+
+/* Grid de ingressos */
+#areaIngressos {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.5rem;
+}
+
+.ingresso-card {
+  background-color: #f5f7ff;
+  border-left: 5px solid #1b6ecc;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.ingresso-card h3 {
+  font-family: "Lobster", sans-serif;
+  margin-bottom: 0.4rem;
+}
+
+.ingresso-card .codigo {
+  color: #1b6ecc;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Histórico de pedidos */
+#historicoPedidos {
+  margin-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+}
+
+#historicoPedidos h2 {
+  font-family: "Lobster", sans-serif;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  color: rgb(255, 255, 255);
+}
+
+.ingresso-historico {
+  background-color: #ffffffb9;
+  border-left: 5px solid #cc1b1b;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.ingresso-historico h3 {
+  font-family: "Lobster", sans-serif;
+  margin-bottom: 0.4rem;
+}
+
+.ingresso-historico .codigo {
+  color: #ff0000;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.ingresso-historico {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem
+}
+
+.ingresso-historico img {
+  width: 90px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  
+    .header-carrinho {
+        font-size: 0.8rem;
+    }
+  
+    .item-carrinho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-pedido {
+    padding: 1.5rem;
+  }
+
+  .acoes-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .acoes-carrinho button {
+    width: 100%;
+  }
+
+  #acoes-botoes {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+
+}
+  </style>
+</head>
+<body>
+  <header class="header-carrinho">
+    <a href="index.html"><img src="./assets/assets-logo/Logo.svg" alt="Logo Luz & Cena" class="logo"></a>
+    <h1>Carrinho de Compras</h1>
+  </header>
+
+  <main class="main-carrinho">
+    <section class="info-pedido">
+      <h2>Resumo do Pedido</h2>
+      <div class="item-carrinho">
+        <img src="./assets/assets-filmes/Amanhecer.png" alt="Amanhecer">
+        <div class="detalhes">
+          <h3>Amanhecer</h3>
+          <p>Sessão: 20:00 - Sala 3</p>
+          <p>2 Ingressos</p>
+          <span>R$ 40,00</span>
+        </div>
+      </div>
+
+      <div class="item-carrinho">
+        <img src="./assets/assets-filmes/NexusDoTempo.png" alt="Nexus do Tempo">
+        <div class="detalhes">
+          <h3>Nexus do Tempo</h3>
+          <p>Sessão: 18:30 - Sala 1</p>
+          <p>1 Ingresso</p>
+          <span>R$ 22,00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="acoes-carrinho">
+      <p class="total">Total: <strong>R$ 62,00</strong></p>
+      <div id="acoes-botoes">
+        <select id="select-pagamento">
+            <option selected disabled>Método de Pagamento</option>
+            <option>Cartão</option>
+            <option>Pix</option>
+            <option>Boleto</option>
+        </select>
+        <a href="index.html"><button id="btn-finalizar">Finalizar Compra</button></a>
+        <a href="index.html#titulo-cartaz"><button id="btn-continuar">Continuar Compra</button></a>
+        <button id="btn-ingressos">Meus Ingressos</button>
+      </div>
+    </section>
+
+    <!-- Área onde os ingressos serão criados -->
+    <section id="areaIngressos"></section>
+
+    <section id="historicoPedidos">
+      <h2>Histórico de Pedidos</h2>
+      <div class="ingresso-historico">
+          <img src="./assets/assets-filmes/CaminhoAbismo.png" alt="Nexus do Tempo">
+          <div class="conteudo-passado">
+              <h3>Caminho para o Abismo</h3>
+              <p>Sala 2 | 19:00</p>
+              <p>Assento: D7</p>
+              <p>Local: Niterói</p>
+              <p class="codigo">Código: ULH99812</p>
+          </div>
+      </div>
+      <div class="ingresso-historico">
+        <img src="./assets/assets-filmes/DesastersDoEscritorio.png" alt="Nexus do Tempo">
+        <div class="conteudo-passado">
+            <h3>Desastres do Escritório</h3>
+            <p>Sala 4 | 21:30</p>
+            <p>Assento: A2</p>
+            <p>Local: Niterói</p>
+            <p class="codigo">Código: ADE45677</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const btnIngressos = document.getElementById("btn-ingressos");
+    const areaIngressos = document.getElementById("areaIngressos");
+
+    const ingressos = [
+      {
+        filme: "Amanhecer",
+        sala: "Sala 3",
+        horario: "20:00",
+        assentos: "C5, C6",
+        local: "Niterói",
+        codigo: "AMN12345"
+      },
+      {
+        filme: "Nexus do Tempo",
+        sala: "Sala 1",
+        horario: "18:30",
+        assentos: "B4",
+        local: "Niterói",
+        codigo: "NXT67890"
+      }
+    ];
+
+    btnIngressos.addEventListener("click", () => {
+        areaIngressos.innerHTML = "";
+        ingressos.forEach((ingresso) => {
+            const card = document.createElement("div");
+            card.classList.add("ingresso-card")     
+            card.innerHTML = `
+            <h3>${ingresso.filme}</h3>
+            <p>${ingresso.sala} | ${ingresso.horario}</p>
+            <p>Assentos: ${ingresso.assentos}</p>
+            <p>Local: ${ingresso.local}</p>
+            <p class="codigo">Código: ${ingresso.codigo}</p>
+            `;
+
+        areaIngressos.appendChild(card);
+      });
+    });
+
+
+  </script>
+</body>
+</html>

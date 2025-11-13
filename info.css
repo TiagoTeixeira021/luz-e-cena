@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: url(./assets/assets-fundo/fundoAbsurdo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12%;
+}
+
+.btn-voltar {
+    position: absolute;
+    top: 50px;
+    right: 38px;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Link dentro do botão */
+.btn-voltar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Efeito hover no botão */
+.btn-voltar:hover {
+    transform: scale(1.1);
+}
+
+
+/* Botões de seta */
+.btn-seta {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.btn-seta.esquerda {
+    left: 30px;
+}
+
+.btn-seta.direita {
+    right: 30px;
+}
+
+
+/* Container principal */
+#main-container .filme.ativo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 4% 6%;
+    border-radius: 2rem;
+    box-shadow: 0 8px 25px rgb(0, 0, 0);
+    gap: 4rem;
+    width: 100%;
+    transition: all 0.6s ease;
+}
+
+/* Cada conjunto de filme + sinopse */
+.filme {
+    display: none;
+    gap: 4rem;
+    align-items: flex-start;
+    justify-content: space-around;
+    transition: opacity 1.2s linear;
+}
+
+/* Card do filme */
+.cardFilme {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 280px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+}
+
+
+.cardFilme img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Informações abaixo da imagem */
+.cardFilme ul {
+    text-align: center;
+    padding: 1rem 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cardFilme ul li {
+    font-family: "Lobster", cursive;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.cardFilme ul li:last-child {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Texto da sinopse */
+section h2 {
+    font-family: "Lobster", cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #555;
+}
+
+section h3 {
+    font-style: italic;
+    margin-top: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+ /* Sessões e Carrinho  do Emcartaz */
+
+#containerSessoesCarrinho {
+    display: flex;
+    justify-content: space-around; /* ou space-between */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.container-sessoes h3 {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.sessoes {
+    display: flex;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.sessao-btn {
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #94b5fc;
+    background-color: transparent;
+    color: #94b5fc;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sessao-btn:hover {
+    background-color: #94b5fc;
+    color: #000;
+}
+
+.sessao-btn.active {
+    background-color: #1b6ecc;
+    color: #fff;
+    border-color: #1b6ecc;
+}
+
+.container-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.quantidade-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn-quantidade {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 2px solid #94b5fc;
+    background-color: transparent;
+    color: #1b6ecc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-quantidade:hover {
+    background-color: #94b5fc;
+    color: #fff;
+}
+
+.quantidade {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.subtotal {
+    margin-left: 1rem;
+    font-weight: bold;
+    color: #1b6ecc;
+}
+
+.select-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+#select-cidade {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 2px solid #94b5fc;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    font-size: 1rem;
+    outline: none;
+    width: 200px;
+    text-align: center;
+    font-family: "Lobster", sans-serif;
+}
+
+#select-cidade option {
+    color: black; 
+}
+
+.btn-carrinho {
+    padding: 1rem 1.2rem;
+    background-color: #94b5fc;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-carrinho:hover {
+    background-color: #1b6ecc;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.sessoes-filme {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.8));
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+.titulo-sessoes {
+    font-family: "Lobster", cursive;
+    font-size: 1.8rem;
+    color: #1b6ecc;
+    margin-bottom: 1rem;
+}
+
+.sessoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+/* Sessões Indiposniveis info-EmBreve -- Sessões Indiposniveis info-EmBreve -- Sessões Indiposniveis info-EmBreve -- */
+.sessao {
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    background: #e0e0e0;
+    color: #a0a0a0;
+    border: 2px solid #ccc;
+    text-decoration: line-through;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.cardFilme img {
+    width: 100%;
+    height: 24em;
+}
+
+#indisponivel {
+    color: red;
+    margin-bottom: 2rem;
+}
+
+.estreia-info {
+    font-style: italic;
+    color: #c62828;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Animações de transição */
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+
+@media (min-width: 1440px) {
+    body {
+        padding: 10%;
+        background-size: cover;
+    }
+
+    #main-container .filme.ativo {
+        padding: 5% 8%;
+        max-width: 1600px;
+        margin: 0 auto;
+        gap: 6rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .cardFilme {
+        width: 360px;
+        transition: transform 0.3s ease;
+    }
+
+    .cardFilme img {
+    width: 100%;
+    height: 30em;
+}
+
+    .cardFilme:hover {
+        transform: scale(1.05);
+    }
+
+    section h2 {
+        font-size: 2.4rem;
+    }
+
+    section p {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    .btn-seta {
+        width: 70px;
+        height: 70px;
+        font-size: 2.4rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-voltar {
+        top: 60px;
+        right: 60px;
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #containerSessoesCarrinho {
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    #select-cidade {
+        width: 240px;
+        font-size: 1.1rem;
+    }
+
+    .sessao-btn {
+        padding: 0.9rem 1.4rem;
+        font-size: 1rem;
+    }
+
+    .btn-carrinho {
+        padding: 1rem 1.4rem;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 1366px) {
+    body {
+        padding: 8%;
+    }
+
+    #main-container .filme.ativo {
+        padding: 3% 5%;
+        gap: 3rem;
+    }
+
+    .cardFilme {
+        width: 280px;
+    }
+
+    section p {
+        font-size: 1.1rem;
+    }
+
+    .btn-seta {
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        padding: 6%;
+    }
+
+    #main-container .filme.ativo {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .cardFilme {
+        width: 70%;
+        max-width: 320px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 1.1rem;
+    }
+
+    .btn-seta {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    .btn-voltar {
+        top: 25px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
+    }
+
+    #containerSessoesCarrinho {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #select-cidade {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 4%;
+        align-items: flex-start;
+    }
+
+    #main-container .filme.ativo {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .cardFilme {
+        width: 90%;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .btn-seta {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+
+    .btn-voltar {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #containerSessoesCarrinho {
+        gap: 1.5rem;
+    }
+
+    .sessao-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 2rem 1rem;
+    }
+
+    #main-container .filme.ativo {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .cardFilme {
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    section p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .btn-seta {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .btn-voltar {
+        width: 38px;
+        height: 38px;
+        top: 10px;
+        right: 10px;
+    }
+
+    #select-cidade {
+        width: 160px;
+        font-size: 0.9rem;
+    }
+
+    .btn-carrinho {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .sessao-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

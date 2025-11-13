@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="info.css">
+    <link rel="shortcut icon" href="./assets/assets-logo/Favicon.png" type="image/x-icon">
+    <title>Luz e Cena</title>
+</head>
+<body>
+    <button class="btn-voltar"><a href="index.html#emCartaz">&#10006;</a></button>
+    <button class="btn-seta esquerda">&#10094;</button> 
+    <button class="btn-seta direita">&#10095;</button>
+
+    <main id="main-container">
+        <div class="filme ativo" id="filme-amanhecer">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/Amanhecer.png" alt="Capa de Filme"/>
+                    <ul>
+                        <li>Amanhecer</li>
+                        <li>100 minutos - Romance</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - Amanhecer</h2>
+                <p>Em uma cidade litorânea, Lívia e Daniel se reencontram após anos separados por segredos do passado.
+                Entre conversas à beira-mar e lembranças que voltam com a maré, eles descobrem que o amor pode renascer — mesmo depois da noite mais longa.</p>
+                <h3>"Alguns amores, como o sol, sempre voltam a nascer — mesmo depois da noite mais longa."</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <button class="btn-carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- FILME 2 -->
+        <div class="filme" id="filme-nexus">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/NexusDoTempo.png" alt="Capa de Filme" />
+                    <ul>
+                        <li>O Nexus do Tempo</li>
+                        <li>90 minutos - Ficção Científica</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - O Nexus do Tempo</h2>
+                <p>Em um laboratório isolado, a cientista Lara (Mia Kovak) descobre um portal temporal instável que conecta diferentes eras. Ao tentar salvar o futuro da humanidade, ela enfrenta versões alternativas de si mesma — e precisa escolher entre alterar o passado ou aceitar o destino.</p>
+                <h3>“O tempo é um ciclo — e cada escolha deixa sua marca no infinito.”</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <button class="btn-carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="filme" id="filme-laEsperanza">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/LaEsperanza.png" alt="Capa de Filme"  />
+                    <ul>
+                        <li>La Esperanza</li>
+                        <li>120 minutos - Drama</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - La Esperanza</h2>
+                <p>Após uma perda dolorosa, dois estranhos se encontram por acaso e descobrem que o amor pode nascer até nos momentos mais sombrios.
+                Em meio à tristeza e à esperança, eles aprendem que a luz do amor é capaz de curar o que parecia impossível.</p>
+                <h3>"Na escuridão, encontramos a luz."</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <button class="btn-carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="filme" id="filme-bosqueMagico">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/BosqueMagico.png" alt="Capa de Filme"  />
+                    <ul>
+                        <li>Bosque Mágico</li>
+                        <li>80 minutos - Animação</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - Bosque Mágico</h2>
+                <p>Em um bosque encantado, quatro amigos — um leão, uma coruja, um coelho e uma corça — partem em uma jornada para salvar seu lar quando a magia começa a desaparecer.
+                Unidos pela amizade e coragem, descobrem que o verdadeiro poder está dentro de cada um deles.</p>
+                <h3>“Quando acreditamos na amizade, até o impossível floresce.” 🌿✨</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <button class="btn-carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="filme" id="filme-mestresFuturo">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/MestresDoFuturo.png" alt="Capa de Filme"  />
+                    <ul>
+                        <li>Mestres do Futuro</li>
+                        <li>80 minutos - Documentário</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - Mestres do Futuro</h2>
+                <p>Especialistas exploram como a inteligência artificial, a robótica e a neurotecnologia estão transformando a forma como vivemos e pensamos.
+                Mestres do Futuro revela os bastidores dessas inovações e questiona os limites do progresso humano.</p>
+                <h3>"O amanhã já começou. A questão é: estamos prontos para ele?"</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <button class="btn-carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="filme" id="filme-caminhoAbismo">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/CaminhoAbismo.png" alt="Capa de Filme"  />
+                    <ul>
+                        <li>Caminho para o Abismo</li>
+                        <li>110 minutos - Terror</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - Caminho para o Abismo</h2>
+                <p>Após receber uma ligação misteriosa, Laura retorna à estrada que jurou nunca mais percorrer.
+                Conforme a tempestade se aproxima, ela é forçada a encarar segredos do passado — e descobre que o verdadeiro terror não está no caminho, mas dentro de si.</p>
+                <h3>"Nem todo caminho leva à salvação."</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <button class="btn-carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="filme" id="filme-amigoDaSombra">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/AmigoDaSombra.png" alt="Capa de Filme"  />
+                    <ul>
+                        <li>Amigo da Sombra</li>
+                        <li>120 minutos - Suspense</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - Amigos da Sombra</h2>
+                <p>Um homem solitário começa a perceber que está sendo seguido — por alguém que parece conhecer todos os seus passos.
+                À medida que mergulha em sua própria escuridão, ele descobre que o inimigo pode estar mais perto do que imagina: dentro de si mesmo.</p>
+                <h3>"Nem toda sombra é feita de escuridão."</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <button class="btn-carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="filme" id="filme-desastresNoEscritorio">
+            <section id="filme">
+                <div class="cardFilme">
+                    <img src="./assets/assets-filmes/DesastersDoEscritorio.png" alt="Capa de Filme"  />
+                    <ul>
+                        <li>Desastres no Escritório</li>
+                        <li>115 minutos - Comédia</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Sinopse - Desastres no Escritório</h2>
+                <p>Dois colegas de trabalho atrapalhados transformam o escritório em um verdadeiro campo de guerra quando tentam impressionar o chefe antes de uma grande reunião.
+                Entre confusões, quedas e planos malucos, o caos vira rotina — e o riso é garantido.</p>
+                <h3>"Quando o trabalho vira uma bagunça, só o bom humor salva o dia!"</h3>
+                <h3>Sessões</h3>
+                <div class="select-wrapper">
+                    <select id="select-cidade">
+                        <option selected disabled>Selecione a cidade</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Salvador</option>
+                        <option>Niterói</option>
+                    </select>
+                </div>
+                <div id="containerSessoesCarrinho">
+                    <div class="container-sessoes">
+                        <button class="sessao-btn">14:00</button>
+                        <button class="sessao-btn">15:30</button>
+                        <button class="sessao-btn">17:00</button>
+                        <button class="sessao-btn">18:30</button>
+                        <button class="sessao-btn">20:00</button>
+                        <button class="sessao-btn">21:30</button>
+                    </div>
+                    <div class="container-carrinho">
+                        <div class="quantidade-container">
+                            <button class="btn-quantidade" data-acao="diminuir">-</button>
+                            <span class="quantidade">0</span>
+                            <button class="btn-quantidade" data-acao="aumentar">+</button>
+                            <span class="subtotal">Subtotal: R$ 0</span>
+                        </div>
+                        <a href="carrinho.html" class="btn-carrinho">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="info.js"></script>
+</body>
+</html>

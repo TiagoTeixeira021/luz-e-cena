@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/assets-logo/Favicon.png" type="image/x-icon">
+    <title>Luz e Cena</title>
+</head>
+<body>
+    <header class="container-header">
+        <nav class="nav-links">
+            <ul id="lista-links-header">
+                <li><a href="#" data-conteudo><img src="./assets/assets-logo/Logo.png" alt="Logo Luz e Cena" id="logo-header"/></a></li>
+                <li><a href="#campo-pesquisa" data-conteudo>Cartaz</a></li>
+                <li><a href="#tituloCinemas" data-conteudo>Cinemas</a></li>
+                <li><a href="#container-sobre-nos" data-conteudo>Sobre</a></li>
+                <li><a href="#redes-sociais" data-conteudo>Contato</a></li>
+                <li><a href="carrinho.html" data-conteudo><img src="./assets/assets-logo/Carrinho.svg" id="login-header" alt="Logo Luz e Cena"/></a></li>
+                <li><a href="login.html" data-conteudo><img src="./assets/assets-logo/Perfil.svg" id="login-header" alt="Logo Luz e Cena"/></a></li>
+            </nav>
+            </ul>
+    </header>
+    <img src="./assets/assets-fundo/banner.png" class="banner" alt="banner cinema"/>
+    <main class="main-container">
+        
+        <section id="campo-pesquisa">
+            <input type="text" placeholder="Pesquise filmes" id="pesquisaFilmes"/>
+        </section>
+
+        <div id="filmes-area">
+            <!-- Cabeçalho com setas e título -->
+            <div id="CartazBotaoTroca">
+                <img src="./assets/assets-icons/setaEsquerda.png" id="setaEsquerda" alt="Seta esquerda"/>
+                <p id="titulo-cartaz">Em Cartaz</p>
+                <img src="./assets/assets-icons/setaDireita.png" id="setaDireita" alt="Seta direita"/>
+            </div>
+
+            <!-- Seção Em Cartaz -->
+            <section id="container-filmes" class="grid-filmes mostrar">
+                <a href="info-filmes.html#filme-amanhecer">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/Amanhecer.png" alt="Amanhecer"/>
+                        <ul>
+                            <li>Amanhecer</li>
+                            <li>100 minutos - Romance</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-filmes.html#filme-nexus">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/NexusDoTempo.png" alt="O Nexus do Tempo"/>
+                        <ul>
+                            <li>O Nexus do Tempo</li>
+                            <li>90 minutos - Ficção Científica</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-filmes.html#filme-laEsperanza">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/LaEsperanza.png" alt="La Esperanza"/>
+                        <ul>
+                            <li>La Esperanza</li>
+                            <li>120 minutos - Romance</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-filmes.html#filme-bosqueMagico">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/BosqueMagico.png" alt="Bosque Mágico"/>
+                        <ul>
+                            <li>Bosque Mágico</li>
+                            <li>80 minutos - Animação</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-filmes.html#filme-mestresFuturo">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/MestresDoFuturo.png" alt="Mestres do Futuro"/>
+                        <ul>
+                            <li>Mestres do Futuro</li>
+                            <li>80 minutos - Documentário</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-filmes.html#filme-caminhoAbismo">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/CaminhoAbismo.png" alt="Caminho para o Abismo"/>
+                        <ul>
+                            <li>Caminho para o Abismo</li>
+                            <li>110 minutos - Terror</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-filmes.html#filme-amigoDaSombra">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/AmigoDaSombra.png" alt="Amigo da Sombra"/>
+                        <ul>
+                            <li>Amigo da Sombra</li>
+                            <li>120 minutos - Suspense</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-filmes.html#filme-desastresNoEscritorio">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/DesastersDoEscritorio.png" alt="Desastres do Escritório"/>
+                        <ul>
+                            <li>Desastres do Escritório</li>
+                            <li>115 minutos - Comédia</li>
+                        </ul>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Seção Em Breve (inicialmente oculta) -->
+            <section id="container-filmes-breve" class="grid-filmes escondido">
+                <a href="info-Embreve.html#filme-capvelvn">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/CAPVELVN.png" alt="Capvelvn" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>Capvelvn</li>
+                            <li>95 minutos - Ação</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-Embreve.html#filme-marvie">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/Marvie.png" alt="Marvie" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>Marvie</li>
+                            <li>110 minutos - Suspense</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-Embreve.html#filme-theKardullh">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/TheKardullh.png" alt="The Kardullh" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>The Kardullh</li>
+                            <li>130 minutos - Drama</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-Embreve.html#filme-desastresNoEscritorio">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/DesastersDoEscritorio.png" alt="Desastres do Escritório" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>Desastres do Escritório</li>
+                            <li>115 minutos - Comédia</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-Embreve.html#filme-itsLove">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/Its love.png" alt="It's Love" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>It's Love</li>
+                            <li>90 minutos - Animação</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-Embreve.html#filme-portusita">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/Portusita.png" alt="Portusita" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>Portusita</li>
+                            <li>90 minutos - Romance</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-Embreve.html#filme-theOadStrand">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/TheOadStrand.png" alt="The Oad Strand" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>The Oad Strand</li>
+                            <li>100 minutos - Ficção Científica</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="info-Embreve.html#filme-amigoDaSombra">
+                    <div class="cardFilme">
+                        <img src="./assets/assets-filmes/AmigoDaSombra.png" alt="Amigo da Sombra" class="tamanhoCapaFilmeEmBreve"/>
+                        <ul>
+                            <li>Amigo da Sombra</li>
+                            <li>120 minutos - Suspense</li>
+                        </ul>
+                    </div>
+                </a>
+            </section>
+        </div>
+
+
+        <section class="campo-email">
+            <img src="./assets/assets-fundo/BannerCombo.png" alt="Banner Combo" id="banner-combo"/>
+            <div class="tiulo-email">
+                <h2>Inscreva-se e ganhe descontos!</h2>
+                 <div class="conteudo-email"> 
+                    <input type="email" placeholder="Email" id="inserirEmail"/>
+                    <button type="submit" data-botao-email>Inscreva-se</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tituloCinemas">
+            <img src="./assets/assets-icons/iconCamera.png" alt="icon camera"/>
+            <p>Cinemas</p>
+            <img src="./assets/assets-icons/iconFilm.png" alt="icon camera"/>
+        </section>
+
+        <section class="container-salasCinema" id="rolagem-cinema">
+            <div class="cardCinema">
+                <img src="./assets/assets-cinemas/BeloHorizonte.png" alt="Cinema BH" class="img-cinema" />
+                <p class="more-info" style="display: none;">
+                    🎬 Luz e Cena - Belo Horizonte No coração de Belo Horizonte, o cinema Luz e Cena oferece uma experiência única, com salas amplas, 
+                    som envolvente e o máximo conforto. Cada sessão é pensada para fazer você viver o filme — não apenas assisti-lo. 📍 Av. Contorno, 2850 - Savassi, Belo Horizonte - MG</p>
+                <button class="btn-seta" onclick="showMoreInfo(this)">
+                <img src="./assets/assets-icons/setaBaixo.svg" alt="Seta para Baixo" class="img-setaBaixo" />
+                </button>
+            </div>
+
+            <div class="cardCinema">
+                <img src="./assets/assets-cinemas/Niteroi.png" alt="Cinema Niterói" class="img-cinema" />
+                <p class="more-info" style="display: none;">
+                    🎥 Luz e Cena - Niterói Localizado em Niterói, este espaço combina tradição e modernidade. 
+                    Com projeção de última geração e um ambiente acolhedor, o Luz e Cena transforma cada exibição em um momento inesquecível para os amantes da sétima arte.
+                    📍 Rua Moreira César, 180 - Icaraí, Niterói - RJ
+                </p>
+                <button class="btn-seta" onclick="showMoreInfo(this)">
+                <img src="./assets/assets-icons/setaBaixo.svg" alt="Seta para Baixo" class="img-setaBaixo" />
+                </button>
+            </div>
+
+            <div class="cardCinema">
+                <img src="./assets/assets-cinemas/RioDeJaneiro.png" alt="Cinema RJ" class="img-cinema" />
+                <p class="more-info" style="display: none;">🍿 Luz e Cena - Rio de Janeiro
+                    No vibrante Rio de Janeiro, o Luz e Cena é o destino ideal para quem busca emoção em alta definição. 
+                    Telas monumentais, som cristalino e um ambiente sofisticado fazem deste cinema uma verdadeira celebração do entretenimento.
+                    📍 Av. Atlântica, 3250  Copacabana, Rio de Janeiro  R
+                </p>
+                <button class="btn-seta" onclick="showMoreInfo(this)">
+                <img src="./assets/assets-icons/setaBaixo.svg" alt="Seta para Baixo" class="img-setaBaixo" />
+                </button>
+            </div>
+
+            <div class="cardCinema">
+                <img src="./assets/assets-cinemas/SaoPaulo.png" alt="Cinema SP" class="img-cinema" />
+                <p class="more-info" style="display: none;">
+                    🎞️ Luz e Cena - São Paulo Em São Paulo, o Luz e Cena redefine o conceito de cinema urbano. 
+                    Design moderno, poltronas confortáveis e tecnologia de ponta garantem uma experiência imersiva e inesquecível — o cinema como ele deve ser.
+                    📍 Av. Paulista, 1578 Bela Vista, São Paulo  SP
+                </p>
+                <button class="btn-seta" onclick="showMoreInfo(this)">
+                <img src="./assets/assets-icons/setaBaixo.svg" alt="Seta para Baixo" class="img-setaBaixo" />
+                </button>
+            </div>
+        </section>
+
+        <section id="container-sobre-nos">
+            <p id="tituloSobreNos">Sobre Luz e Cena</p>
+            <p class="conteudo-sobre-nos">No Luz e Cena, acreditamos que cada filme é uma viagem única, capaz de emocionar, inspirar e transformar quem assiste. Nosso cinema foi criado para oferecer uma experiência completa, onde a magia da sétima arte encontra conforto, tecnologia de ponta e um ambiente acolhedor.</p>
+            <p class="conteudo-sobre-nos">Nossa missão é levar o público para dentro das histórias, desde os grandes clássicos até os lançamentos mais aguardados. Com salas modernas, som imersivo e projeção de alta qualidade, cada sessão é pensada para que você viva o filme como nunca antes.</p>
+            <p class="conteudo-sobre-nos">Mais do que exibir filmes, queremos criar memórias. Luz e Cena é o lugar onde amigos, famílias e amantes do cinema se reúnem para celebrar a arte de contar histórias, explorando emoções, descobertas e sonhos na tela grande. Porque aqui, cada luz acesa e cada cena projetada têm um propósito: fazer você sentir o cinema de verdade.</p>
+            <div class="container-midias">
+                <img src="./assets/assets-logo/Favicon.png"/>
+            </div>
+        </section>
+        <img src="./assets/assets-fundo/Tarjeta.png" alt="Tarjeta" id="tarjeta"/>      
+    </main>
+    <footer class="rodape">
+        <div class="rodape_informacoes">
+            <div class="funcionamento">
+                <img src="./assets/assets-logo/Logo.svg" alt="logo" class="logo" data-midias/>
+                <p>Onde a realidade encontra a fantasia!</p>
+            </div>
+            <div class="funcionamento">
+                <h3>Funcionamento</h3>
+                <ul>
+                    <li>Segunda a Sexta - 16h á 00h</li>
+                    <li>ola@luzecena.com.br</li>
+                    <li>0800-541-320</li>
+                </ul>
+            </div>
+            <div class="funcionamento">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#lista-links-header" data-footer>Home</a></li>
+                    <li><a href="#campo-pesquisa" data-footer>Cartaz</a></li>
+                    <li><a href="#tituloCinemas" data-footer>Cinemas</a></li>
+                </ul>
+            </div>
+            <div class="funcionamento">
+                <h3>Redes Sociais</h3>
+                <ul id="redes-sociais">
+                    <li><a href="#"><img src="./assets/assets-midias/Instragam.png" data-midias></a></li>
+                    <li><a href="#"><img src="./assets/assets-midias/Tiktok.png" data-midias></a></li>
+                    <li><a href="#"><img src="./assets/assets-midias/Whatsapp.png" data-midias></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
